@@ -22,9 +22,7 @@ client.connect((err) => {
     if (err) {
       return console.error('error running query', err);
     }
-    // Count Function
     console.log('Found ' + result.rowCount + ' person(s) by the name ' + input);
-    // Indepedent search print
     for (const list of result.rows) {
       console.log("- " + list.id + ": " + list.first_name + " " + list.last_name + ", born " +"'" + list.birthdate.getFullYear() + "-" + ("0" + (list.birthdate.getMonth() + 1)).slice(-2) +"-"+ ("0" + (list.birthdate.getDate())).slice(-2) + "'");
     }
