@@ -33,3 +33,5 @@ knex.select('*').from('famous_people')
   count(rows);
   showPeople(rows);
 });
+
+knex.destroy();
