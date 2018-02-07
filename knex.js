@@ -23,8 +23,8 @@ function count(result) {
 }
 
 knex.select('*').from('famous_people')
-.where('first_name', 'LIKE', `${input}`)
-.orWhere('last_name', 'LIKE', `${input}`)
+.where('first_name', 'LIKE', input)
+.orWhere('last_name', 'LIKE', input)
 .asCallback(function(err, rows){
   if (err) {
     throw err;
